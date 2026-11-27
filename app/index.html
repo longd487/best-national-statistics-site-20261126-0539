@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StatAtlas — United States National Statistics</title>
+<meta name="description" content="An independent explorer for United States national statistics: GDP, population, jobs, prices, trade and society, with real published figures.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="index.html"><strong>StatAtlas</strong><span>United States National Statistics</span></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav" aria-label="Sections">
+      <ul>
+        <li><a class="current" href="index.html">Home</a></li>
+        <li><a href="economy.html">Economy</a></li>
+        <li><a href="population.html">Population</a></li>
+        <li><a href="labour.html">Labour</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="trade.html">Trade</a></li>
+        <li><a href="society.html">Society</a></li>
+        <li><a href="methods.html">Methods</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="eyebrow">Independent statistics explorer</p>
+    <h1>The United States, in numbers.</h1>
+    <p class="lede">GDP, population, jobs, prices, trade and society — the headline
+    figures for the world&rsquo;s largest economy, drawn from the official
+    releases of the Bureau of Economic Analysis, the Census Bureau, the
+    Bureau of Labor Statistics and the Treasury, and presented in one place.</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="k-label">Gross domestic product</div>
+      <div class="k-value">$30.9T</div>
+      <div class="k-sub">2025, current dollars</div>
+      <div class="k-delta">Real growth +2.3%</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">Population</div>
+      <div class="k-value">341.8M</div>
+      <div class="k-sub">1 July 2025 estimate</div>
+      <div class="k-delta">+0.52% on a year earlier</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">Unemployment rate</div>
+      <div class="k-value">4.0%</div>
+      <div class="k-sub">2024 annual average</div>
+      <div class="k-delta">Up from 3.6% in 2023</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">Consumer price inflation</div>
+      <div class="k-value">2.9%</div>
+      <div class="k-sub">2024 annual average</div>
+      <div class="k-delta">Down from 8.0% in 2022</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Explore the headline series</h2>
+    <div class="panel">
+      <div class="seg" role="group" aria-label="Choose a series">
+        <button class="seg-btn active" data-chart-target="dashChart" data-series="gdpNominal">GDP</button>
+        <button class="seg-btn" data-chart-target="dashChart" data-series="population">Population</button>
+        <button class="seg-btn" data-chart-target="dashChart" data-series="unemployment">Unemployment</button>
+        <button class="seg-btn" data-chart-target="dashChart" data-series="cpiHeadline">Inflation</button>
+      </div>
+      <div class="chart" id="dashChart" data-chart="line" data-series="gdpNominal" data-aria="Headline indicator chart"></div>
+      <p class="note">GDP: nominal, billions of dollars (BEA). Population: July 1 estimates,
+      millions (Census Bureau). Unemployment and inflation: annual averages (BLS).</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Latest releases</h2>
+    <div class="panel">
+      <ul class="releases">
+        <li>
+          <span class="r-date">25 Nov 2026</span>
+          <span class="r-body"><strong>Third-quarter GDP, second estimate: +4.3% annualised.</strong>
+          Real GDP growth was revised up from +3.4% in the advance estimate.
+          <small>Bureau of Economic Analysis</small></span>
+        </li>
+        <li>
+          <span class="r-date">25 Nov 2026</span>
+          <span class="r-body"><strong>October PCE price index: +3.8% on a year earlier;</strong>
+          core PCE +3.3%, the fastest since November 2023.
+          <small>Bureau of Economic Analysis</small></span>
+        </li>
+        <li>
+          <span class="r-date">4 Dec 2026</span>
+          <span class="r-body"><strong>November employment situation</strong> — jobs, unemployment
+          and wages for November.
+          <small>Bureau of Labor Statistics · scheduled</small></span>
+        </li>
+        <li>
+          <span class="r-date">10 Dec 2026</span>
+          <span class="r-body"><strong>November Consumer Price Index</strong> — inflation for November.
+          <small>Bureau of Labor Statistics · scheduled</small></span>
+        </li>
+        <li>
+          <span class="r-date">23 Dec 2026</span>
+          <span class="r-body"><strong>November personal income and spending</strong> (with the PCE
+          index) and the <strong>third estimate of third-quarter GDP</strong>.
+          <small>Bureau of Economic Analysis · scheduled</small></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Browse by topic</h2>
+    <div class="grid-2-equal">
+      <div class="panel"><h3><a href="economy.html">Economy</a></h3>
+        <p>GDP and growth, what the economy produces, and the federal debt.</p></div>
+      <div class="panel"><h3><a href="population.html">Population</a></h3>
+        <p>How many people live here, how fast the population grows, and the largest states.</p></div>
+      <div class="panel"><h3><a href="labour.html">Labour</a></h3>
+        <p>Unemployment, participation, and what households earn.</p></div>
+      <div class="panel"><h3><a href="prices.html">Prices</a></h3>
+        <p>Inflation, headline and core, from the post-pandemic peak to today.</p></div>
+      <div class="panel"><h3><a href="trade.html">Trade</a></h3>
+        <p>Exports, imports and the deficit, in goods and in services.</p></div>
+      <div class="panel"><h3><a href="society.html">Society</a></h3>
+        <p>Life expectancy, poverty, housing and education.</p></div>
+    </div>
+    <p class="note">Every figure on this site is a published official statistic. Sources,
+    vintages and methods are listed on the <a href="methods.html">Methods page</a>.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>StatAtlas</strong> is an independent demonstration site. It is not
+    affiliated with the U.S. government or any statistical agency.</p>
+    <p>Figures are reproduced as published by the Bureau of Economic Analysis, the
+    U.S. Census Bureau, the Bureau of Labor Statistics, the U.S. Department of the
+    Treasury, the National Center for Health Statistics, the World Bank and UNDP.
+    Data last checked <span data-updated>26 November 2026</span>.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
