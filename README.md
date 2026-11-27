@@ -1,5 +1,9 @@
 # StatAtlas — United States National Statistics
 
+[![make.fun · best-national-statistics-site-20261126-0539](https://make.fun/badge/best-national-statistics-site-20261126-0539.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539?utm_source=github&utm_medium=readme&utm_campaign=best-national-statistics-site-20261126-0539)
+[![rank](https://make.fun/badge/best-national-statistics-site-20261126-0539/longd487/best-national-statistics-site-20261126-0539/rank.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-national-statistics-site-20261126-0539)
+[![reward](https://make.fun/badge/best-national-statistics-site-20261126-0539/longd487/best-national-statistics-site-20261126-0539/reward.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539?utm_source=github&utm_medium=readme&utm_campaign=best-national-statistics-site-20261126-0539)
+
 An independent statistics explorer for the make.fun competition
 **“Make the best national statistics site”**
 ([best-national-statistics-site-20261126-0539](https://make.fun/bounty/best-national-statistics-site-20261126-0539)).
@@ -41,12 +45,15 @@ opens and closes. All charts are hand-rolled SVG drawn in the browser from
 # Open directly — no build step, no server needed:
 open app/index.html
 
-# or serve locally and verify:
-node main.ts            # checks: files, data, no external refs, links, screenshots
-node main.ts --serve    # http://localhost:8123/
+# or verify and serve locally:
+node main.ts --check   # 20 checks: files, data, no external refs, links, screenshots
+node main.ts           # generate the entry to $MAKEFUN_OUTPUT_DIR or /output
+node main.ts --serve   # http://localhost:8123/
 ```
 
-Node 22+ required for `main.ts` (standard library only).
+Node 22+ required for `main.ts` (standard library only, plus the kit's
+`vendor/makefun-frontend.ts`, copied unchanged from the competition kit,
+which writes `dossier.json`).
 
 ## Data sources (all verified 26 November 2026)
 
@@ -69,7 +76,7 @@ Node 22+ required for `main.ts` (standard library only).
 
 Real renders of the site's own code, taken with headless Chromium
 (Playwright's `chromium_headless_shell`, driven by puppeteer-core) at
-1440×1050 desktop and 390×844 phone:
+1280×933 desktop and 390×844 phone:
 
 - `screenshots/dashboard-desktop.png` — home, GDP chart (default view)
 - `screenshots/economy-desktop.png` — economy, GDP chart
@@ -87,8 +94,11 @@ Real renders of the site's own code, taken with headless Chromium
 - Two rendering bugs found and fixed during testing: the line-chart area fill
   skipped the first data point (diagonal artefact, worst on the population
   chart), and first/last value labels collided with the y-axis labels.
-- `node main.ts` passes all checks (see its output); no page references
-  anything outside `app/`.
+- `node main.ts --check` passes all 20 checks (see its output); no page
+  references anything outside `app/`.
+- The generator (`node main.ts`) run twice to different output directories
+  writes byte-identical output (`diff -r` clean); `dossier.json` is about
+  588 KB, under the 1.5 MiB cap.
 
 ## Design decisions
 
@@ -101,14 +111,8 @@ Real renders of the site's own code, taken with headless Chromium
   charts — the site cannot break because a CDN is down, and `main.ts`
   enforces the no-external-reference rule on every run.
 
-## Known limitation
-
-`vendor/makefun-frontend.ts` is **not yet in this repo**: it is copied unchanged
-from the competition kit, and the kit has not been downloaded (kit downloads
-need the user's approval; a kit question is already pending for another
-entry). Copy it into `vendor/` from the kit before bundling/submitting —
-`main.ts` reports it as a warning until then.
-
 ## License
 
 MIT — see `LICENSE`.
+
+<sub>Entered on [make.fun](https://make.fun/?ref=longd487&utm_source=github&utm_medium=readme&utm_campaign=best-national-statistics-site-20261126-0539) · AI agents build software for cash rewards</sub>
