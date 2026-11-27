@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Population — StatAtlas: United States National Statistics</title>
+<meta name="description" content="United States population: how many people, how fast it grows, and the largest states. Real published figures from the Census Bureau.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="index.html"><strong>StatAtlas</strong><span>United States National Statistics</span></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav" aria-label="Sections">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="economy.html">Economy</a></li>
+        <li><a class="current" href="population.html">Population</a></li>
+        <li><a href="labour.html">Labour</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="trade.html">Trade</a></li>
+        <li><a href="society.html">Society</a></li>
+        <li><a href="methods.html">Methods</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="eyebrow">Population</p>
+    <h1>341.8 million people.</h1>
+    <p class="lede">The United States is the third most populous country in the world,
+    after India and China. Growth has slowed since the pandemic-era low:
+    the population rose 0.52% in the year to July 2025, down from 0.96% the
+    year before, as net international migration fell.</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="k-label">Population, 1 July 2025</div>
+      <div class="k-value">341.8M</div>
+      <div class="k-sub">Resident population</div>
+      <div class="k-delta">+1.78M on a year earlier</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">Growth, year to July 2025</div>
+      <div class="k-value">+0.52%</div>
+      <div class="k-sub">Down from +0.96% in 2024</div>
+      <div class="k-delta">Slowest since 2021</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">2020 census count</div>
+      <div class="k-value">331.4M</div>
+      <div class="k-sub">1 April 2020</div>
+      <div class="k-delta">+7.4% on 2010</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">Largest state</div>
+      <div class="k-value">39.4M</div>
+      <div class="k-sub">California, July 2024</div>
+      <div class="k-delta">11.6% of the nation</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Population, 2020–2025</h2>
+    <div class="panel">
+      <div class="chart" id="popChart" data-chart="line" data-series="population" data-aria="Population chart"></div>
+      <p class="note">Resident population, July 1 estimates. Source: U.S. Census Bureau,
+      Vintage 2025 population estimates.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The largest states</h2>
+    <div class="panel">
+      <div class="filter-row">
+        <input type="search" data-filter="#statesTable" data-filter-count="#statesCount"
+          placeholder="Search states or capitals…" aria-label="Search states">
+        <span class="filter-count" id="statesCount">10 of 10 shown</span>
+      </div>
+      <div class="table-wrap">
+        <table class="sortable" id="statesTable">
+          <thead>
+            <tr>
+              <th data-sort="0" data-type="text">State</th>
+              <th data-sort="1" data-type="number" class="num">Population, July 2024 (M)</th>
+              <th data-sort="2" data-type="text">Capital</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>California</td><td class="num">39.43</td><td>Sacramento</td></tr>
+            <tr><td>Texas</td><td class="num">31.29</td><td>Austin</td></tr>
+            <tr><td>Florida</td><td class="num">23.37</td><td>Tallahassee</td></tr>
+            <tr><td>New York</td><td class="num">19.87</td><td>Albany</td></tr>
+            <tr><td>Pennsylvania</td><td class="num">13.08</td><td>Harrisburg</td></tr>
+            <tr><td>Illinois</td><td class="num">12.71</td><td>Springfield</td></tr>
+            <tr><td>Ohio</td><td class="num">11.88</td><td>Columbus</td></tr>
+            <tr><td>Georgia</td><td class="num">11.18</td><td>Atlanta</td></tr>
+            <tr><td>North Carolina</td><td class="num">11.05</td><td>Raleigh</td></tr>
+            <tr><td>Michigan</td><td class="num">10.14</td><td>Lansing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Click a column heading to sort; use the search box to filter.
+      Source: U.S. Census Bureau, Vintage 2024 state population estimates.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Growth, year by year</h2>
+    <div class="table-wrap">
+      <table class="sortable">
+        <thead>
+          <tr>
+            <th data-sort="0" data-type="number">Year to July 1</th>
+            <th data-sort="1" data-type="number" class="num">Population (M)</th>
+            <th data-sort="2" data-type="number" class="num">Growth (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2020</td><td class="num">331.58</td><td class="num">—</td></tr>
+          <tr><td>2021</td><td class="num">332.10</td><td class="num">+0.16</td></tr>
+          <tr><td>2022</td><td class="num">334.00</td><td class="num">+0.57</td></tr>
+          <tr><td>2023</td><td class="num">336.76</td><td class="num">+0.83</td></tr>
+          <tr><td>2024</td><td class="num">340.00</td><td class="num">+0.96</td></tr>
+          <tr><td>2025</td><td class="num">341.78</td><td class="num">+0.52</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">The 2021 growth rate of 0.16% was the slowest since the Census Bureau
+    began publishing annual estimates, reflecting the pandemic&rsquo;s effect on
+    births, deaths and migration. Source: U.S. Census Bureau, Vintage 2025.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>StatAtlas</strong> is an independent demonstration site. It is not
+    affiliated with the U.S. government or any statistical agency.</p>
+    <p>Figures are reproduced as published by the Bureau of Economic Analysis, the
+    U.S. Census Bureau, the Bureau of Labor Statistics, the U.S. Department of the
+    Treasury, the National Center for Health Statistics, the World Bank and UNDP.
+    Data last checked <span data-updated>26 November 2026</span>.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
