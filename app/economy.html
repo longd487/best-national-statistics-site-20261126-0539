@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Economy — StatAtlas: United States National Statistics</title>
+<meta name="description" content="United States GDP and growth, what the economy produces, and the federal debt. Real published figures from the BEA and the Treasury.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="index.html"><strong>StatAtlas</strong><span>United States National Statistics</span></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav" aria-label="Sections">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="current" href="economy.html">Economy</a></li>
+        <li><a href="population.html">Population</a></li>
+        <li><a href="labour.html">Labour</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="trade.html">Trade</a></li>
+        <li><a href="society.html">Society</a></li>
+        <li><a href="methods.html">Methods</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="eyebrow">Economy</p>
+    <h1>The largest economy in the world.</h1>
+    <p class="lede">Nominal GDP reached $30.9 trillion in 2025. The economy grew 2.3% in
+    real terms that year, after 3.0% in 2024 — the third consecutive year of
+    growth above 2% following the 2020 contraction.</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="k-label">GDP, 2025</div>
+      <div class="k-value">$30.9T</div>
+      <div class="k-sub">Current dollars</div>
+      <div class="k-delta">+5.0% nominal on 2024</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">Real GDP growth, 2025</div>
+      <div class="k-value">+2.3%</div>
+      <div class="k-sub">On 2024</div>
+      <div class="k-delta">2024: +3.0%</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">GDP per person, 2024</div>
+      <div class="k-value">$85,809</div>
+      <div class="k-sub">Current dollars</div>
+      <div class="k-delta">World Bank</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">Gross federal debt</div>
+      <div class="k-value">$36.2T</div>
+      <div class="k-sub">December 2024</div>
+      <div class="k-delta down">About 123% of GDP</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Output, 2015–2025</h2>
+    <div class="panel">
+      <div class="seg" role="group" aria-label="Choose a series">
+        <button class="seg-btn active" data-chart-target="gdpChart" data-series="gdpNominal">GDP level</button>
+        <button class="seg-btn" data-chart-target="gdpChart" data-series="gdpRealGrowth">Real growth</button>
+      </div>
+      <div class="seg" role="group" aria-label="Choose a period">
+        <button class="seg-btn active" data-chart-target="gdpChart" data-range="all">All years</button>
+        <button class="seg-btn" data-chart-target="gdpChart" data-range="2015-2019">2015–2019</button>
+        <button class="seg-btn" data-chart-target="gdpChart" data-range="2020-2025">2020–2025</button>
+      </div>
+      <div class="chart" id="gdpChart" data-chart="line" data-series="gdpNominal" data-aria="GDP chart"></div>
+      <p class="note">Nominal GDP in current dollars; real growth is the percent change in
+      chained-dollar GDP. Source: Bureau of Economic Analysis, NIPA Tables 1.1.5
+      and 1.1.1 (2026 annual-update vintage).</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What the economy produces</h2>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>Value added by sector, 2021</h3>
+        <div class="chart" id="compDonut" data-donut="gdpComposition2021" data-center="76.3%" data-center-sub="services share" data-aria="GDP composition donut chart"></div>
+        <ul class="legend">
+          <li><span class="sw" style="background:#0e7c7b"></span>Services — 76.3% of GDP</li>
+          <li><span class="sw" style="background:#102a43"></span>Industry — 17.6% of GDP</li>
+          <li><span class="sw" style="background:#d98e00"></span>Agriculture, forestry and fishing — 0.9%</li>
+          <li><span class="sw" style="background:#7a9bb0"></span>Net taxes on products — 5.2%</li>
+        </ul>
+        <p class="note">Manufacturing, at 10.5% of GDP, sits inside industry.
+        Source: World Bank, World Development Indicators.</p>
+      </div>
+      <div class="panel">
+        <h3>The public debt</h3>
+        <p>Gross federal debt stood at <strong>$36.2 trillion</strong> at the end of
+        December 2024, about 123% of GDP. Debt held by the public — the part
+        financed in the bond market — was about $28.2 trillion.</p>
+        <p>General government gross debt was 120.8% of GDP in 2024 on the World
+        Bank&rsquo;s measure, which counts state and local government debt as well.</p>
+        <p class="note">Source: U.S. Department of the Treasury, Fiscal Data;
+        World Bank, World Development Indicators.</p>
+        <h3>Reading the table</h3>
+        <p>The 2020 dip is the pandemic recession: nominal GDP fell from $21.5
+        trillion to $21.4 trillion and real GDP contracted 2.2%. The rebound —
+        +6.3% real growth in 2021 — was the fastest since 1984, and nominal
+        GDP has risen every year since.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>GDP, year by year</h2>
+    <div class="table-wrap">
+      <table class="sortable">
+        <thead>
+          <tr>
+            <th data-sort="0" data-type="number">Year</th>
+            <th data-sort="1" data-type="number" class="num">Nominal GDP ($bn)</th>
+            <th data-sort="2" data-type="number" class="num">Real growth (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2015</td><td class="num">18,295.0</td><td class="num">+2.9</td></tr>
+          <tr><td>2016</td><td class="num">18,804.9</td><td class="num">+1.7</td></tr>
+          <tr><td>2017</td><td class="num">19,612.1</td><td class="num">+2.5</td></tr>
+          <tr><td>2018</td><td class="num">20,656.5</td><td class="num">+3.0</td></tr>
+          <tr><td>2019</td><td class="num">21,540.0</td><td class="num">+2.6</td></tr>
+          <tr><td>2020</td><td class="num">21,354.1</td><td class="num">−2.2</td></tr>
+          <tr><td>2021</td><td class="num">23,745.8</td><td class="num">+6.3</td></tr>
+          <tr><td>2022</td><td class="num">26,059.7</td><td class="num">+2.4</td></tr>
+          <tr><td>2023</td><td class="num">27,825.9</td><td class="num">+2.9</td></tr>
+          <tr><td>2024</td><td class="num">29,381.0</td><td class="num">+3.0</td></tr>
+          <tr><td>2025</td><td class="num">30,861.3</td><td class="num">+2.3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Click a column heading to sort. Source: Bureau of Economic Analysis,
+    NIPA Tables 1.1.5 and 1.1.1, 2026 annual-update vintage.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>StatAtlas</strong> is an independent demonstration site. It is not
+    affiliated with the U.S. government or any statistical agency.</p>
+    <p>Figures are reproduced as published by the Bureau of Economic Analysis, the
+    U.S. Census Bureau, the Bureau of Labor Statistics, the U.S. Department of the
+    Treasury, the National Center for Health Statistics, the World Bank and UNDP.
+    Data last checked <span data-updated>26 November 2026</span>.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
